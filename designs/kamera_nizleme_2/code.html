@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Invoice2Sheet - Camera &amp; Preview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#3b6a57",
+                        "on-tertiary-fixed": "#001e2c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#002116",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#5c5f61",
+                        "surface-bright": "#f9f9fa",
+                        "primary-fixed": "#e1e2e5",
+                        "on-surface": "#1a1c1d",
+                        "tertiary": "#000000",
+                        "on-primary-fixed": "#191c1e",
+                        "surface-dim": "#dadadb",
+                        "background": "#f9f9fa",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#68889c",
+                        "secondary-container": "#b6e8d1",
+                        "on-surface-variant": "#444749",
+                        "tertiary-fixed": "#c6e7fe",
+                        "surface": "#f9f9fa",
+                        "outline": "#75777a",
+                        "primary-fixed-dim": "#c5c7c9",
+                        "tertiary-container": "#001e2c",
+                        "secondary-fixed": "#bbedd6",
+                        "surface-container-high": "#e8e8e9",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#aacbe1",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c4c7c9",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-secondary-fixed-variant": "#204f3e",
+                        "on-tertiary-fixed-variant": "#2a4a5d",
+                        "surface-variant": "#e2e2e3",
+                        "surface-container-low": "#f3f3f4",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#444749",
+                        "surface-container": "#eeeeef",
+                        "secondary": "#396755",
+                        "inverse-primary": "#c5c7c9",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e2e2e3",
+                        "on-background": "#1a1c1d",
+                        "inverse-surface": "#2f3132",
+                        "primary": "#000000",
+                        "primary-container": "#191c1e",
+                        "on-primary-container": "#828486",
+                        "secondary-fixed-dim": "#a0d1bb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "title-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "title-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "500"}],
+                        "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "400"}],
+                        "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "500"}],
+                        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "400"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .skeleton-shimmer {
+            background: linear-gradient(90deg, #e2e2e3 25%, #f3f3f4 50%, #e2e2e3 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-black font-body-md text-on-surface overflow-hidden">
+<!-- Camera Viewport Container -->
+<main class="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+<!-- Live Viewfinder Image Mock -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-80" data-alt="A POV perspective of a smartphone camera viewfinder focusing on a paper corporate invoice lying on a dark executive wooden desk. The lighting is focused and cinematic, creating a professional and high-stakes atmosphere. The UI elements of the camera are minimal and clinical, following a modern productive minimalism aesthetic with clean lines and high contrast. The invoice details are visible but softly blurred at the edges, emphasizing the central extraction point." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0hlJnYsnqsF4UogsuQgQ-pJWi1lCgemY2g68nxAfWUU09UhsRl7tZI20IARko2E9jr2mnzWylzf73AOmnFuIZEBsIF7XrtP7ZMYcJdAJY3jRjFOD_V-zJuWdsF66DcsWGVtTFhqNt5ssKD039lrZpJvSRKbTewoBmFVFJGhaE-5qzyv4JR4ctT7QScj7SN99Y1ebGB_ZuN6i5bNhDSNMTk9GXKIxzDC2-pHj-q5B_D2fnFPi28rqL6xHt13F2-T1j56jhl_HVj70"/>
+</div>
+<!-- Scanning Frame Overlay -->
+<div class="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+<div class="w-4/5 h-3/5 border-2 border-primary-fixed-dim rounded-xl opacity-40">
+<div class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-white rounded-tl-lg"></div>
+<div class="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-white rounded-tr-lg"></div>
+<div class="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-white rounded-bl-lg"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-white rounded-br-lg"></div>
+</div>
+</div>
+<!-- Top Bar Controls -->
+<nav class="absolute top-0 w-full z-20 flex justify-between items-center p-gutter md:px-margin-tablet h-16">
+<button class="w-10 h-10 flex items-center justify-center bg-black/30 backdrop-blur-md text-white rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+<div class="flex gap-4">
+<button class="w-10 h-10 flex items-center justify-center bg-black/30 backdrop-blur-md text-white rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="flash_on">flash_on</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-black/30 backdrop-blur-md text-white rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="image">image</span>
+</button>
+</div>
+</nav>
+<!-- Bottom Shutter Area -->
+<div class="absolute bottom-0 w-full z-20 bg-gradient-to-t from-black/80 to-transparent pt-12 pb-10 flex flex-col items-center">
+<div class="flex items-center justify-around w-full max-w-md px-10">
+<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center border border-white/20">
+<span class="text-white font-label-sm">AUTO</span>
+</div>
+<button class="w-20 h-20 bg-white rounded-full p-1 border-4 border-white/20 active:scale-90 duration-150">
+<div class="w-full h-full rounded-full border-2 border-black/10"></div>
+</button>
+<div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center border border-white/20">
+<span class="material-symbols-outlined text-white" data-icon="history">history</span>
+</div>
+</div>
+<p class="mt-4 text-white/70 font-label-lg tracking-wider">ALIGN INVOICE WITHIN FRAME</p>
+</div>
+<!-- PROCESSING OVERLAY (İşleniyor...) -->
+<!-- Toggle visibility for design preview: currently set to flex for display -->
+<div class="absolute inset-0 z-30 bg-surface-container/95 backdrop-blur-sm flex flex-col items-center justify-center px-margin-mobile">
+<div class="w-full max-w-sm space-y-6">
+<!-- Status Header -->
+<div class="text-center space-y-2">
+<div class="inline-flex items-center gap-2 text-primary font-title-lg">
+<span class="material-symbols-outlined animate-spin" data-icon="progress_activity">progress_activity</span>
+<h2 class="font-title-lg text-title-lg">İşleniyor...</h2>
+</div>
+<p class="text-on-surface-variant font-body-md">Veriler tablonuz için ayıklanıyor</p>
+</div>
+<!-- Skeleton Cards (Bento style processing) -->
+<div class="grid grid-cols-2 gap-3">
+<div class="col-span-2 h-24 rounded-xl bg-surface-container-high skeleton-shimmer border border-outline-variant/30 flex flex-col p-4 space-y-3">
+<div class="h-4 w-1/3 bg-surface-variant rounded-full"></div>
+<div class="h-6 w-2/3 bg-surface-variant rounded-full"></div>
+</div>
+<div class="h-32 rounded-xl bg-surface-container-high skeleton-shimmer border border-outline-variant/30 flex flex-col p-4 space-y-3">
+<div class="h-3 w-1/2 bg-surface-variant rounded-full"></div>
+<div class="h-5 w-full bg-surface-variant rounded-full"></div>
+<div class="mt-auto h-2 w-full bg-surface-variant rounded-full opacity-50"></div>
+</div>
+<div class="h-32 rounded-xl bg-surface-container-high skeleton-shimmer border border-outline-variant/30 flex flex-col p-4 space-y-3">
+<div class="h-3 w-2/3 bg-surface-variant rounded-full"></div>
+<div class="h-5 w-1/2 bg-surface-variant rounded-full"></div>
+<div class="mt-auto h-2 w-full bg-surface-variant rounded-full opacity-50"></div>
+</div>
+<div class="col-span-2 h-16 rounded-xl bg-surface-container-high skeleton-shimmer border border-outline-variant/30 flex items-center justify-between px-4">
+<div class="h-4 w-1/4 bg-surface-variant rounded-full"></div>
+<div class="h-6 w-1/3 bg-surface-variant rounded-full"></div>
+</div>
+</div>
+<!-- Progress Detail Indicator -->
+<div class="space-y-2">
+<div class="flex justify-between font-label-sm text-on-surface-variant px-1">
+<span>OCR ANALİZİ</span>
+<span>65%</span>
+</div>
+<div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full w-[65%] bg-secondary rounded-full"></div>
+</div>
+</div>
+<!-- Cancel Button -->
+<div class="pt-4 flex justify-center">
+<button class="px-6 py-2.5 rounded-full border border-outline text-on-surface-variant font-label-lg hover:bg-surface-container-high active:scale-95 transition-all">
+                        İptal Et
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Hidden during processing for focus) -->
+<!-- Suppression rule applied as we are in a task-focused screen -->
+<!-- Hidden Bottom Nav for PWA Structure Consistency -->
+<!-- Suppression rule applied: focused camera journey hides global navigation -->
+</body></html>

@@ -1,0 +1,51 @@
+# 🌓 stitch_adaptive_design_prompt.md (Project ID: 7133331975016165212)
+
+## 1. Prompt Metni (Kopyala-Yapıştır)
+
+> **Role:** Senior UI/UX Designer specialized in Google Material Design 3 (Adaptive Systems).
+> **Project:** 'Invoice2Sheet' - Serverless, offline-first global expense tracker PWA.
+>
+> **Core Requirement:** Design a dual-mode interface (Light and Dark) that seamlessly toggles based on system preferences or user selection.
+>
+> **1. Theme Specifications:**
+> - **Light Mode:** Use a 'Clean Paper' aesthetic. Background: #FAFAFA. Primary: Google Blue (#1a73e8). Surfaces: White (#FFFFFF) with subtle elevation shadows.
+> - **Dark Mode:** Use a 'Deep Charcoal' aesthetic. Background: #121212. Primary: Lighter Google Blue (#8ab4f8). Surfaces: #1e1e1e with tonal elevation (Material 3 standard).
+>
+> **2. Multi-language Support (i18n):**
+> - Top-right 'Globe' icon that opens a sleek selection menu for [English / Turkish].
+> - Ensure all labels and buttons (e.g., "Scan Invoice" / "Fatura Çek") are dynamically rendered.
+>
+> **3. Main Dashboard UI:**
+> - **App Bar:** Profile avatar and App Name. Add a 'Sun/Moon' toggle next to the Language icon.
+> - **Primary Action:** A prominent **Floating Action Button (FAB)** in the center. In Dark Mode, give it a soft glow; in Light Mode, use a sharp Material shadow.
+> - **Offline Queue:** A container that appears only when local items exist. Text: "X Pending Items".
+>
+> **4. Verification & Confirmation UI:**
+> - **Skeleton Loader:** Create a shimmering animation for the 3-second OCR processing window.
+> - **Editable Form:** Material 3 'Outlined Input' fields for [Vendor], [Date], and [Total Amount].
+> - **Success Flow:** A celebratory but professional animation when the "Save to Sheets" button is pressed.
+>
+> **5. Setup & Security (BYOK):**
+> - A settings page to input the **Google Vision API Key**.
+> - Use a 'Security Badge' icon to emphasize that data is stored locally and encrypted.
+>
+> **Platform Strategy:** Focus on a high-end **Mobile-First PWA**. Ensure contrast ratios meet WCAG AA standards in both modes. Implement smooth 300ms transitions between themes.
+
+---
+
+## 2. Tasarım Stratejisi ve Karar Gerekçeleri
+
+* **Adaptif Renk Paleti:** Material Design 3, koyu modda renk doygunluğunu (saturation) düşürmeyi önerir. Prompt'ta "Lighter Google Blue" kullanmamızın sebebi, koyu arka planda canlı mavilerin gözü yormasını engellemek ve okunabilirliği artırmaktır.
+* **Sistem Uyumu:** PWA'lar cihazın yerel ayarlarını okuyabilir. Tasarımda bu geçişin (Sun/Moon toggle) olması, kullanıcıya özelleştirme hissi verir.
+* **Erişilebilirlik (WCAG):** Hem Light hem de Dark modda, metin ve arka plan arasındaki kontrast oranının en az 4.5:1 olması sağlanmıştır. Bu, görme zorluğu çeken veya yoğun güneş ışığı altında uygulamayı kullananlar için hayatidir.
+
+---
+
+## 3. Teknik Uygulama Notu (Geliştirici İçin)
+
+Kod tarafında Tailwind CSS kullanırken şu yapıyı kurmanı öneririm:
+
+```html
+<div class="bg-white dark:bg-[#121212] text-slate-900 dark:text-[#e8eaed]">
+  </div>
+```

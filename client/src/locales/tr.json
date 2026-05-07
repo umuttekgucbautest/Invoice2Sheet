@@ -1,0 +1,77 @@
+{
+  "common": {
+    "subtitle": "Offline-First Gider Takibi",
+    "recentInvoices": "Son Faturalar",
+    "noInvoices": "Henüz fatura yok. Taramak için yukarıya dokunun.",
+    "extracting": "Veri çıkarılıyor...",
+    "target": "Hedef",
+    "cancel": "İptal Et"
+  },
+  "dashboard": {
+    "welcome": "Hoş Geldiniz",
+    "welcomeSubtitle": "Faturalarınızı akıllı tablolara dönüştürmeye hazırsınız.",
+    "thisMonthSync": "BU AY AKTARILAN",
+    "systemStatus": "SİSTEM DURUMU",
+    "errorDetected": "Hata Tespit Edildi",
+    "optimized": "Optimize Edildi",
+    "connectedTable": "BAĞLI TABLO",
+    "offlineQueue": "İnternet Bekleyenler",
+    "pendingQueue": "İnternet Bekleyenler",
+    "itemsPending": "Öğe Bekliyor",
+    "noInvoices": "Henüz taranmış bir fatura yok.",
+    "syncStopped": "Bağlantı koptuğu için durduruldu",
+    "connectionLost": "Bağlantı koptuğu için durduruldu",
+    "uploading": "Yükleniyor...",
+    "uploadError": "Yükleme sırasında hata oluştu",
+    "synced": "Başarıyla aktarıldı",
+    "ocrPower": "OCR Gücü Cebinizde",
+    "ocrDesc": "Yapay zeka ile fatura verilerini saniyeler içinde hatasız ayıklayın.",
+    "ocrSubtitle": "Yapay zeka ile fatura verilerini saniyeler içinde hatasız ayıklayın.",
+    "scanInvoice": "Fatura Çek"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "scan": "Tara",
+    "settings": "Ayarlar"
+  },
+  "actions": {
+    "addInvoice": "Yeni Fatura Tara",
+    "scanInstruction": "Fotoğraf çekin veya galeriden seçin"
+  },
+  "status": {
+    "pending": "Beklemede",
+    "syncing": "Eşitleniyor",
+    "failed": "Hata",
+    "synced": "Eşitlendi"
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "description": "Uygulama yapılandırmanızı ve API bağlantılarınızı buradan yönetin.",
+    "auth": "Kimlik Doğrulama",
+    "authDesc": "Faturaların OCR işlemi ile okunması için gereklidir.",
+    "apiKey": "Vision API Anahtarı",
+    "save": "Kaydet",
+    "language": "Dil",
+    "languageDesc": "Uygulama dilini değiştir.",
+    "autoSync": "Otomatik Senkronizasyon",
+    "darkMode": "Karanlık Mod",
+    "targetFolder": "Hedef Root Klasör",
+    "browse": "Göz At",
+    "autoSyncDesc": "Verileri anında Google Sheets'e aktar.",
+    "darkModeDesc": "Gece modu görünümüne geç.",
+    "dataManagement": "Veri Yönetimi",
+    "clearHistory": "Geçmişi Temizle",
+    "deleteAccount": "Hesabı Sil"
+  },
+  "verification": {
+    "title": "Verileri Doğrula",
+    "description": "Lütfen taranan fatura bilgilerini kontrol edin ve eksikleri tamamlayın.",
+    "vendor": "Firma Adı",
+    "date": "Tarih",
+    "amount": "Toplam Tutar",
+    "currency": "Para Birimi",
+    "cancel": "İptal",
+    "confirm": "Google Sheets'e Kaydet",
+    "invoiceImage": "Fatura Görüntüsü"
+  }
+}

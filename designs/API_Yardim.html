@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-dim": "#dadadb",
+                      "on-secondary-container": "#3b6a57",
+                      "outline": "#75777a",
+                      "secondary": "#396755",
+                      "primary-fixed-dim": "#c5c7c9",
+                      "surface-container": "#eeeeef",
+                      "tertiary": "#000000",
+                      "tertiary-fixed-dim": "#aacbe1",
+                      "primary-fixed": "#e1e2e5",
+                      "primary-container": "#191c1e",
+                      "on-error": "#ffffff",
+                      "inverse-primary": "#c5c7c9",
+                      "tertiary-fixed": "#c6e7fe",
+                      "inverse-on-surface": "#f1f1f1",
+                      "secondary-fixed-dim": "#a0d1bb",
+                      "on-tertiary-fixed-variant": "#2a4a5d",
+                      "on-primary-fixed-variant": "#444749",
+                      "on-background": "#1a1c1d",
+                      "surface-variant": "#e2e2e3",
+                      "surface-container-low": "#f3f3f4",
+                      "on-primary-container": "#828486",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed": "#bbedd6",
+                      "surface": "#f9f9fa",
+                      "primary": "#000000",
+                      "surface-container-high": "#e8e8e9",
+                      "error": "#ba1a1a",
+                      "on-tertiary-container": "#68889c",
+                      "on-secondary-fixed-variant": "#204f3e",
+                      "on-secondary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#b6e8d1",
+                      "background": "#f9f9fa",
+                      "surface-container-highest": "#e2e2e3",
+                      "tertiary-container": "#001e2c",
+                      "on-surface-variant": "#444749",
+                      "outline-variant": "#c4c7c9",
+                      "surface-tint": "#5c5f61",
+                      "on-primary-fixed": "#191c1e",
+                      "inverse-surface": "#2f3132",
+                      "on-surface": "#1a1c1d",
+                      "on-secondary-fixed": "#002116",
+                      "on-tertiary-fixed": "#001e2c",
+                      "on-tertiary": "#ffffff",
+                      "surface-bright": "#f9f9fa"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "margin-tablet": "24px",
+                      "gutter": "16px",
+                      "container-max": "1200px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "label-sm": ["Inter"],
+                      "label-lg": ["Inter"],
+                      "title-lg": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "title-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                      "title-lg": ["22px", {"lineHeight": "28px", "letterSpacing": "0px", "fontWeight": "500"}],
+                      "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "0px", "fontWeight": "400"}],
+                      "title-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.15px", "fontWeight": "500"}],
+                      "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                      "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                      "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9fa;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-number {
+            background-color: #b6e8d1; /* secondary-container (Soft Mint) */
+            color: #204f3e; /* on-secondary-fixed-variant */
+        }
+        .guide-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e2e3;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-tertiary-fixed docked full-width top-0 z-40">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-tablet h-16 w-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="cursor-pointer active:scale-95 duration-200 p-2 rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-display-lg text-title-lg font-bold text-primary dark:text-primary-fixed">API Anahtarı Yardımı</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="A professional close-up portrait of a user profile avatar in a clean, high-key studio setting. The lighting is soft and even, highlighting a friendly expression against a neutral, minimalist background. The aesthetic is modern and corporate, consistent with a high-end SaaS application interface using a light mode color palette of whites and soft grays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdpFvvPqDZ4Dx8qL1syAVlEtM4XhmCS6Sp0OF2dZAtNWlTdGpFSwWq7RLmqwWlr_w-JBNLNh1TR79s1F-dAw7qd8txLGKNn9LV50bpN9nYnF4N4MpQVLszOW93O3zctEeuYfn0DetDksO1Z-FG1ci8iHb8T4OYs664B0iREMeecY5jaMORlKAWx_3Ccb7LQE9tQ4SfyBCyTjZP3L-NPpcV4zhBzDVoUUfg4sNxS5SyyAlBjy8yi7IWyliNOt1IuQb7qYPGrG9j3Fw"/>
+</div>
+</div>
+</header>
+<main class="max-w-3xl mx-auto px-margin-mobile md:px-margin-tablet py-10 mb-24">
+<!-- Hero Illustration / Header Section -->
+<div class="mb-10 text-center">
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-secondary-container mb-4">
+<span class="material-symbols-outlined text-4xl text-on-secondary-container">key</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-2">Google Vision Kurulumu</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mx-auto">
+                Invoice2Sheet'in faturalarınızı otomatik olarak okuyabilmesi için bir Cloud Vision API anahtarına ihtiyacı vardır.
+            </p>
+</div>
+<!-- Step-by-Step Guide -->
+<div class="space-y-4">
+<!-- Step 1 -->
+<div class="guide-card p-6 rounded-xl flex gap-6 items-start hover:bg-surface-container-low transition-all">
+<div class="step-number min-w-[36px] h-[36px] flex items-center justify-center rounded-full font-bold">1</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary mb-1">Google Cloud Console'a gidin</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-3">
+                        Hizmetleri yönetmek ve yeni anahtarlar oluşturmak için ana panele erişin.
+                    </p>
+<a class="inline-flex items-center gap-2 text-on-secondary-container font-label-lg hover:underline" href="#">
+                        Console'u Aç <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="guide-card p-6 rounded-xl flex gap-6 items-start hover:bg-surface-container-low transition-all">
+<div class="step-number min-w-[36px] h-[36px] flex items-center justify-center rounded-full font-bold">2</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary mb-1">Yeni bir proje oluşturun veya mevcut olanı seçin</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Üst kısımdaki proje seçiciden "Invoice2Sheet" adında yeni bir proje başlatmak işlerinizi kolaylaştıracaktır.
+                    </p>
+</div>
+</div>
+<!-- Image Callout -->
+<div class="rounded-xl overflow-hidden my-8 border border-outline-variant shadow-sm">
+<img class="w-full h-auto" data-alt="A clean and professional digital interface screenshot showing a cloud management dashboard. The scene is rendered in a minimalist style with a soft blue and white color scheme. Subtle glows emanate from key interactive elements, and the lighting is bright and modern, conveying a sense of organized professional data management." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz7Bfvc0BgO58ImNuPbsWppa8OlpoKChP4RyPAzFPr3lqDzsgTZzZk9PtsGY01-b-yWIHXYCNtGYbK3XTN-OSyq5xKnEPVLFWAvjrZonc9H9Q4kkD1bVGnkhVKv7GipxGoOJ_zm1pWxtmwxGkHYgpIxi8VTvdLciau18uN2neZdI2EL1iFdiT4rafu4A-JpXa17wBeVj34nONavwmaY56fIxAw_3VbHmOyt9eqc8gMOCHWYQeqDOYWzk0pU4MuFIlfsceEkQEsJbk"/>
+</div>
+<!-- Step 3 -->
+<div class="guide-card p-6 rounded-xl flex gap-6 items-start hover:bg-surface-container-low transition-all">
+<div class="step-number min-w-[36px] h-[36px] flex items-center justify-center rounded-full font-bold">3</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary mb-1">'Cloud Vision API'yi aratın ve etkinleştirin</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Kitaplık bölümünde "Cloud Vision" aramasını yapın ve "Etkinleştir" (Enable) butonuna tıklayın.
+                    </p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="guide-card p-6 rounded-xl flex gap-6 items-start hover:bg-surface-container-low transition-all">
+<div class="step-number min-w-[36px] h-[36px] flex items-center justify-center rounded-full font-bold">4</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary mb-1">'Kimlik Bilgileri' sekmesinden 'API Anahtarı Oluştur'u seçin</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Sol menüdeki "API ve Hizmetler" altından "Kimlik Bilgileri" (Credentials) kısmına gidin ve yeni bir API anahtarı üretin.
+                    </p>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="guide-card p-6 rounded-xl border-2 border-secondary-container bg-secondary-container/10 flex gap-6 items-start">
+<div class="step-number min-w-[36px] h-[36px] flex items-center justify-center rounded-full font-bold">5</div>
+<div class="flex-1">
+<h3 class="font-title-md text-title-md text-primary mb-1">Anahtarı kopyalayıp uygulamanın Ayarlar bölümüne yapıştırın</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Oluşturulan anahtarı kopyalayın. Ardından Invoice2Sheet içindeki Ayarlar paneline dönerek "API Key" alanına ekleyin.
+                    </p>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-lg active:scale-95 duration-150 transition-all">
+                        Ayarlara Geri Dön
+                    </button>
+</div>
+</div>
+</div>
+<!-- Help/Support Footer -->
+<div class="mt-12 p-6 bg-surface-container-high rounded-xl text-center">
+<h4 class="font-title-md text-title-md text-primary mb-2">Sorun mu yaşıyorsunuz?</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Google Cloud Console kullanımı hakkında daha fazla detay için topluluk dökümanlarımıza göz atın.
+            </p>
+<div class="flex justify-center gap-4">
+<button class="flex items-center gap-2 border border-outline px-4 py-2 rounded-full font-label-lg hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[18px]">description</span> Dökümantasyon
+                </button>
+<button class="flex items-center gap-2 border border-outline px-4 py-2 rounded-full font-label-lg hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined text-[18px]">support_agent</span> Destek Al
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center h-20 px-gutter bg-surface-container dark:bg-on-tertiary-fixed shadow-sm z-50">
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-on-tertiary-fixed-variant transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-lg text-label-lg">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 hover:bg-surface-container-high dark:hover:bg-on-tertiary-fixed-variant transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined">document_scanner</span>
+<span class="font-label-lg text-label-lg">Scan</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed-dim rounded-full px-5 py-1 transition-all active:scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-lg text-label-lg">Settings</span>
+</div>
+</nav>
+</body></html>

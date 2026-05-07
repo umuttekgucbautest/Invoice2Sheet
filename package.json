@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "dev": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "lint": "npm run lint --prefix client"
+  },
+  "dependencies": {
+    "dexie": "^4.4.2",
+    "dexie-react-hooks": "^4.4.0",
+    "i18next": "^26.0.9",
+    "i18next-browser-languagedetector": "^8.2.1",
+    "react-i18next": "^17.0.6",
+    "vite-plugin-pwa": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@vitejs/plugin-react": "^6.0.1"
+  }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#aeb9d0",
+                        "on-tertiary": "#233144",
+                        "tertiary-container": "#d5e3fd",
+                        "surface-container-lowest": "#060e20",
+                        "on-tertiary-fixed-variant": "#3a485c",
+                        "on-primary-fixed-variant": "#00513a",
+                        "error-container": "#93000a",
+                        "inverse-primary": "#1b6b4f",
+                        "surface-container": "#171f33",
+                        "on-primary-fixed": "#002115",
+                        "outline": "#89938c",
+                        "outline-variant": "#3f4943",
+                        "on-tertiary-container": "#57657b",
+                        "surface-container-low": "#131b2e",
+                        "on-surface": "#dae2fd",
+                        "inverse-on-surface": "#283044",
+                        "surface-bright": "#31394d",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "secondary": "#bcc7de",
+                        "on-tertiary-fixed": "#0d1c2f",
+                        "surface-dim": "#0b1326",
+                        "on-primary": "#003827",
+                        "tertiary-fixed-dim": "#b9c7e0",
+                        "tertiary-fixed": "#d5e3fd",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#2d3449",
+                        "secondary-container": "#3e495d",
+                        "surface": "#0b1326",
+                        "primary-fixed": "#a6f2cf",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#d8e3fb",
+                        "inverse-surface": "#dae2fd",
+                        "on-background": "#dae2fd",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#bcc7de",
+                        "tertiary": "#ffffff",
+                        "on-primary-container": "#247155",
+                        "on-surface-variant": "#bec9c2",
+                        "surface-container-highest": "#2d3449",
+                        "surface-container-high": "#222a3d",
+                        "on-secondary": "#263143",
+                        "background": "#0b1326",
+                        "primary-container": "#a6f2cf",
+                        "primary": "#ffffff",
+                        "surface-tint": "#8bd6b4",
+                        "primary-fixed-dim": "#8bd6b4",
+                        "on-secondary-fixed": "#111c2d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "4px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "32px",
+                        "gutter": "24px",
+                        "lg": "24px",
+                        "sm": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "title-lg": ["Inter"],
+                        "headline-md": ["Manrope"],
+                        "label-lg": ["Inter"],
+                        "display-lg": ["Manrope"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.25px", "fontWeight": "400"}],
+                        "title-lg": ["22px", {"lineHeight": "28px", "fontWeight": "500"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                        "display-lg": ["57px", {"lineHeight": "64px", "letterSpacing": "-0.25px", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-surface-container/80 backdrop-blur-md fixed top-0 w-full z-40 border-b border-outline-variant">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest border border-outline-variant">
+<img alt="User profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1pAdOiMHFGpCaKosKaFHj-uqbXfgVRetBclVZFriGRIsnIJOYRShsAJkS0WdExpd-FbvOfrCW60f-oap_8UK1_JF-5t4YGuZq6MOnG_qtzdKyJ8lsbLcfBZEpu3pwlPyGQNQcsfF66JqsxpC6MJ_0w4up27ZGIuAZ1WlN_KugLe1_zPZrjA6JhxgfxiUgJGTp4u6iXnhHX38Cyh29UePruKmRKJDdZZtmjjgh2b2YuZoQJWVhWpErHuocmBBqC8tF0I8iBe13GlU"/>
+</div>
+<h1 class="font-headline-lg text-title-lg text-primary">Invoice2Sheet</h1>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<button class="font-label-lg text-on-surface-variant hover:text-on-surface transition-colors px-4 py-2 rounded-full cursor-pointer active:scale-95 duration-200">Home</button>
+<button class="font-label-lg text-on-surface-variant hover:text-on-surface transition-colors px-4 py-2 rounded-full cursor-pointer active:scale-95 duration-200">Scan</button>
+<button class="font-label-lg text-primary bg-primary-container/20 px-4 py-2 rounded-full cursor-pointer active:scale-95 duration-200">Settings</button>
+</div>
+</div>
+</header>
+<main class="pt-24 px-margin-mobile md:px-margin-desktop max-w-3xl mx-auto space-y-8">
+<!-- Page Title -->
+<section class="flex flex-col gap-2">
+<h2 class="font-headline-md text-primary">Ayarlar</h2>
+<p class="text-on-surface-variant font-body-md">Uygulama yapılandırmanızı ve API bağlantılarınızı buradan yönetin.</p>
+</section>
+<!-- API Configuration Card -->
+<div class="bg-surface-container rounded-xl border border-outline-variant p-6 space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-surface-tint" data-icon="vpn_key">vpn_key</span>
+<h3 class="font-title-lg text-on-surface">Kimlik Doğrulama</h3>
+</div>
+<div class="space-y-2">
+<label class="block font-label-lg text-on-surface-variant" for="api_key">Google Vision API Key</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg px-4 py-3 font-body-md text-on-surface focus:border-surface-tint focus:ring-1 focus:ring-surface-tint outline-none transition-all pr-12" id="api_key" type="password" value="••••••••••••••••••••••••••••••"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+<p class="font-label-sm text-on-surface-variant">Faturaların OCR işlemi ile okunması için gereklidir.</p>
+</div>
+</div>
+<!-- Folder Selection Simulation -->
+<div class="bg-surface-container rounded-xl border border-outline-variant p-6 space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-surface-tint" data-icon="folder_shared">folder_shared</span>
+<h3 class="font-title-lg text-on-surface">Hedef Root Klasör</h3>
+</div>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-label-lg flex items-center gap-2 hover:brightness-110 active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[20px]" data-icon="create_new_folder">create_new_folder</span>
+                    Klasör Seç
+                </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center p-4 bg-surface-container-high rounded-lg border border-surface-tint/30 hover:border-surface-tint transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-surface-tint mr-4" data-icon="folder" style="font-variation-settings: 'FILL' 1;">folder</span>
+<div class="flex-grow">
+<div class="font-body-lg text-on-surface">Invoices_2024</div>
+<div class="font-label-sm text-on-surface-variant">Google Drive / Documents / Finans</div>
+</div>
+<span class="material-symbols-outlined text-surface-tint" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center p-4 bg-surface-container-low rounded-lg border border-transparent hover:border-outline-variant transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant mr-4" data-icon="folder">folder</span>
+<div class="flex-grow">
+<div class="font-body-lg text-on-surface-variant">Archived_Receipts</div>
+<div class="font-label-sm text-on-tertiary-container">Google Drive / Backup</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Toggles Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Auto-sync Toggle -->
+<div class="bg-surface-container rounded-xl border border-outline-variant p-6 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<h3 class="font-title-lg text-on-surface">Auto-sync</h3>
+<p class="font-label-sm text-on-surface-variant">Verileri anında Google Sheets'e aktar.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-on-surface after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-surface-tint"></div>
+</label>
+</div>
+<!-- Dark Mode Toggle -->
+<div class="bg-surface-container rounded-xl border border-outline-variant p-6 flex items-center justify-between">
+<div class="flex flex-col gap-1">
+<h3 class="font-title-lg text-on-surface">Dark Mode</h3>
+<p class="font-label-sm text-on-surface-variant">Gece modu görünümüne geç.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-12 h-7 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[4px] after:left-[4px] after:bg-on-surface after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-surface-tint"></div>
+</label>
+</div>
+<!-- Language Selection -->
+<div class="bg-surface-container rounded-xl border border-outline-variant p-6 flex items-center justify-between md:col-span-2">
+<div class="flex flex-col gap-1">
+<h3 class="font-title-lg text-on-surface">Dil (Language)</h3>
+<p class="font-label-sm text-on-surface-variant">Uygulama dilini değiştir.</p>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface border border-outline-variant rounded-lg pl-4 pr-10 py-2 font-label-lg focus:border-surface-tint focus:ring-1 focus:ring-surface-tint outline-none cursor-pointer">
+<option value="tr">Türkçe</option>
+<option value="en">English</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Danger Zone -->
+<div class="bg-error-container/10 rounded-xl border border-error-container/30 p-6 space-y-4">
+<h3 class="font-title-lg text-error">Veri Yönetimi</h3>
+<div class="flex flex-col sm:flex-row gap-3">
+<button class="border border-error-container text-error px-4 py-2 rounded-lg font-label-lg hover:bg-error-container/10 transition-colors">Geçmişi Temizle</button>
+<button class="bg-error-container text-on-error-container px-4 py-2 rounded-lg font-label-lg hover:brightness-110 shadow-sm transition-all">Hesabı Sil</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full flex justify-around items-center h-20 bg-surface-container-high border-t border-outline-variant shadow-lg z-50 md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 hover:text-on-surface transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 hover:text-on-surface transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="document_scanner">document_scanner</span>
+<span class="font-label-sm">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-surface-tint py-1 active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-sm">Settings</span>
+</a>
+</nav>
+</body></html>

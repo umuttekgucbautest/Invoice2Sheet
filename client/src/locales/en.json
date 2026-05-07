@@ -1,0 +1,77 @@
+{
+  "common": {
+    "subtitle": "Offline-First Expense Tracking",
+    "recentInvoices": "Recent Invoices",
+    "noInvoices": "No invoices yet. Tap above to scan.",
+    "extracting": "Extracting data...",
+    "target": "Target",
+    "cancel": "Cancel"
+  },
+  "dashboard": {
+    "welcome": "Welcome",
+    "welcomeSubtitle": "Ready to turn your invoices into smart spreadsheets.",
+    "thisMonthSync": "SYNCED THIS MONTH",
+    "systemStatus": "SYSTEM STATUS",
+    "errorDetected": "Error Detected",
+    "optimized": "Optimized",
+    "connectedTable": "CONNECTED TABLE",
+    "offlineQueue": "Offline Queue",
+    "pendingQueue": "Offline Queue",
+    "itemsPending": "Items Pending",
+    "noInvoices": "No scanned invoices yet.",
+    "syncStopped": "Stopped due to lost connection",
+    "connectionLost": "Stopped due to lost connection",
+    "uploading": "Uploading...",
+    "uploadError": "Error during upload",
+    "synced": "Successfully synced",
+    "ocrPower": "OCR Power in Your Pocket",
+    "ocrDesc": "Extract invoice data flawlessly in seconds with AI.",
+    "ocrSubtitle": "Extract invoice data flawlessly in seconds with AI.",
+    "scanInvoice": "Scan Invoice"
+  },
+  "nav": {
+    "home": "Home",
+    "scan": "Scan",
+    "settings": "Settings"
+  },
+  "actions": {
+    "addInvoice": "Scan New Invoice",
+    "scanInstruction": "Take a photo or choose from gallery"
+  },
+  "status": {
+    "pending": "Pending",
+    "syncing": "Syncing",
+    "failed": "Failed",
+    "synced": "Synced"
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Manage your app configuration and API connections here.",
+    "auth": "Authentication",
+    "authDesc": "Required for OCR processing of invoices.",
+    "apiKey": "Vision API Key",
+    "save": "Save",
+    "language": "Language",
+    "languageDesc": "Change application language.",
+    "autoSync": "Auto-sync",
+    "darkMode": "Dark Mode",
+    "targetFolder": "Target Root Folder",
+    "browse": "Browse",
+    "autoSyncDesc": "Sync data to Google Sheets instantly.",
+    "darkModeDesc": "Switch to dark mode.",
+    "dataManagement": "Data Management",
+    "clearHistory": "Clear History",
+    "deleteAccount": "Delete Account"
+  },
+  "verification": {
+    "title": "Verify Data",
+    "description": "Please check the scanned invoice details and complete missing info.",
+    "vendor": "Vendor Name",
+    "date": "Date",
+    "amount": "Total Amount",
+    "currency": "Currency",
+    "cancel": "Cancel",
+    "confirm": "Save to Google Sheets",
+    "invoiceImage": "Invoice Image"
+  }
+}
